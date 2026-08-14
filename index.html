@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mamadou Tine</title>
+<meta name="description" content="Portfolio de Mamadou Tine, étudiant L3 Transmission de Données et Sécurité de l'Information (UCAD) — développement web, cybersécurité, DevOps.">
+
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+<!-- Bootstrap grid/utilities -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="netBg" class="net-bg" aria-hidden="true"></canvas>
+<div class="scanline" aria-hidden="true"></div>
+
+<!-- ===================== NAV ===================== -->
+<nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand" href="#accueil">
+      <span class="brand-mono">MT</span>
+      <span class="brand-name"><b>Mamadou</b> <b>Tine</b></span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-label="Ouvrir le menu">
+      <span class="toggler-bar"></span><span class="toggler-bar"></span><span class="toggler-bar"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="#accueil">Accueil</a></li>
+        <li class="nav-item"><a class="nav-link" href="#apropos">À propos</a></li>
+        <li class="nav-item"><a class="nav-link" href="#competences">Compétences</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projets">Projets</a></li>
+        <li class="nav-item"><a class="nav-link nav-link-cta" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ===================== HERO / ACCUEIL ===================== -->
+<header id="accueil" class="hero">
+  <div class="container hero-grid">
+    <div class="hero-text">
+      <p class="eyebrow">L3 · Transmission de Données &amp; Sécurité de l'Information — UCAD</p>
+      <h2>Je conçois des systèmes<br> et je sécurise <span class="accent-2">leurs échanges</span>.</h2>
+      <div class="hero-actions">
+        <a href="#projets" class="btn btn-signal">Voir les projets <i class="fa-solid fa-arrow-right-long"></i></a>
+        <a href="#contact" class="btn btn-ghost">Me contacter</a>
+      </div>
+      <div class="hero-terminal" aria-hidden="true">
+        <div class="terminal-bar"><span></span><span></span><span></span><code>~/mtine/session</code></div>
+        <div class="terminal-body"><!-- rempli par script.js --></div>
+      </div>
+    </div>
+
+    <!-- ===== CARTE D'ACCRÉDITATION  ===== -->
+    <div class="id-badge">
+      <div class="badge-top">
+        <span class="chip" aria-hidden="true"></span>
+        <span class="badge-status"><i></i>ACCÈS ACTIF</span>
+      </div>
+
+      <div class="badge-photo">
+        <img id="badgePhotoImg" src="img/pp.png" alt="Photo de profil de Mamadou Tine">
+        <span class="corner tl"></span><span class="corner tr"></span>
+        <span class="corner bl"></span><span class="corner br"></span>
+        <div class="monogram"><b>MT</b><small>PHOTO NON DÉFINIE</small></div>
+      </div>
+
+      <h3 class="badge-name">Mamadou Tine</h3>
+      <p class="badge-role">DEV &amp; CYBERSÉCURITÉ</p>
+
+      <div class="badge-clearance">
+        <div class="lbl"><span>NIVEAU D'ACCRÉDITATION</span><span>L3</span></div>
+        <div class="clearance-bar"><span></span></div>
+      </div>
+
+      <div class="badge-footer">
+        <div class="badge-barcode" aria-hidden="true">
+          <i style="height:100%"></i><i style="height:60%"></i><i style="height:90%"></i><i style="height:40%"></i>
+          <i style="height:100%"></i><i style="height:70%"></i><i style="height:50%"></i><i style="height:95%"></i>
+          <i style="height:65%"></i><i style="height:100%"></i><i style="height:45%"></i><i style="height:80%"></i>
+          <i style="height:55%"></i><i style="height:100%"></i><i style="height:70%"></i><i style="height:90%"></i>
+        </div>
+
+        <a href="https://clubtdsi.sn/" target="_blank" rel="noopener" class="club-credit">
+          <img src="img/club-tdsi-logo.png" alt="Logo Club TDSI">
+          <span>Membre du <b>Club TDSI</b></span>
+        </a>
+    </div>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- ===================== À PROPOS ===================== -->
+  <section id="apropos" class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="frame-tag">À propos</span>
+        <h2>D'où je pars</h2>
+      </div>
+      <div class="row about-row">
+        <div class="col-lg-7">
+          <p>
+            Je m'appelle Mamadou Tine, actuellement en <strong>Licence 3 — filière Transmission de Données
+            et Sécurité de l'Information (TDSI)</strong> à la Faculté des Sciences et Techniques de
+            l'UCAD. Ma formation couvre aussi bien le développement
+            que les réseaux, la cryptographie et le hacking éthique.
+          </p>
+          <p>
+            J'ai un profil à la croisée de deux mondes : construire des applications propres,
+            et comprendre comment elles peuvent être attaquées pour mieux les défendre. Les
+            mathématiques (algèbre, théorie des nombres) sont un fil conducteur que je retrouve
+            aussi bien en cryptographie qu'en algorithmique.
+          </p>
+          <div class="about-links">
+            <a href="https://fad.fst.ucad.sn/course/index.php?categoryid=307" target="_blank" rel="noopener">
+              <i class="fa-solid fa-graduation-cap"></i> Programme de la formation (FST · UCAD)
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <ul class="fact-list">
+            <li><span class="fact-k">Formation</span><span class="fact-v">L3 TDSI — UCAD / FST</span></li>
+            <li><span class="fact-k">Axes</span><span class="fact-v">Dev full-stack · Cybersécurité · Réseaux</span></li>
+            <li><span class="fact-k">Langue</span><span class="fact-v">FR / EN (technique)</span></li>
+            <li><span class="fact-k">Basé à</span><span class="fact-v">Dakar, Sénégal</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== COMPÉTENCES ===================== -->
+  <section id="competences" class="section section-alt">
+    <div class="container">
+      <div class="section-head">
+        <span class="frame-tag">Compétences</span>
+        <h2>Ce que je manipule</h2>
+      </div>
+
+      <div class="skills-blocks">
+
+        <div class="skills-block cat-dev">
+          <div class="skills-block-head">
+            <h3><i class="fa-solid fa-code-branch"></i> Développement</h3>
+            <div class="integrity-bar" data-integrity="88"><span></span></div>
+          </div>
+          <div class="skills-grid">
+            <div class="skill-card cat-dev" data-tilt>
+              <div class="sc-glow" aria-hidden="true"></div>
+              <h4><i class="fa-solid fa-code"></i> Langages</h4>
+              <div class="tags">
+                <span>Java</span><span>PHP</span><span>JavaScript</span><span>Python</span><span>HTML</span><span>CSS</span><span>SQL</span>
+              </div>
+            </div>
+            <div class="skill-card cat-dev" data-tilt>
+              <div class="sc-glow" aria-hidden="true"></div>
+              <h4><i class="fa-solid fa-layer-group"></i> Frameworks &amp; backend</h4>
+              <div class="tags">
+                <span>Django</span><span>Spring Boot</span><span>Jakarta EE</span><span>JPA / EJB</span><span>Servlets / JSP</span><span>Bootstrap</span>
+              </div>
+            </div>
+            <div class="skill-card cat-dev" data-tilt>
+              <div class="sc-glow" aria-hidden="true"></div>
+              <h4><i class="fa-solid fa-database"></i> Bases de données</h4>
+              <div class="tags">
+                <span>PostgreSQL</span><span>rôles</span><span>vues</span><span>triggers</span><span>transactions</span><span>MySQL</span><span>Redis</span><span>Apache Derby</span>
+              </div>
+            </div>
+            <div class="skill-card cat-dev" data-tilt>
+              <div class="sc-glow" aria-hidden="true"></div>
+              <h4><i class="fa-solid fa-diagram-project"></i> DevOps</h4>
+              <div class="tags">
+                <span>Docker</span><span>Docker Compose</span><span>GitLab CI/CD</span><span>Git</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skills-block cat-sec">
+          <div class="skills-block-head">
+            <h3><i class="fa-solid fa-shield-halved"></i> Cybersécurité</h3>
+            <div class="integrity-bar" data-integrity="76"><span></span></div>
+          </div>
+          <div class="skills-grid">
+            <div class="skill-card cat-sec" data-tilt>
+              <div class="sc-glow" aria-hidden="true"></div>
+              <h4><i class="fa-solid fa-satellite-dish"></i> Reconnaissance &amp; test</h4>
+              <div class="tags">
+                <span>Nmap</span><span>recon-ng</span><span>Metasploit</span><span>Wireshark</span><span>Gophish</span>
+              </div>
+            </div>
+            <div class="skill-card cat-sec" data-tilt>
+              <div class="sc-glow" aria-hidden="true"></div>
+              <h4><i class="fa-solid fa-list-check"></i> Référentiels</h4>
+              <div class="tags">
+                <span>MITRE ATT&amp;CK</span><span>OWASP Top 10</span>
+              </div>
+            </div>
+            <div class="skill-card cat-sec" data-tilt>
+              <div class="sc-glow" aria-hidden="true"></div>
+              <h4><i class="fa-solid fa-lock"></i> Sécurité applicative</h4>
+              <div class="tags">
+                <span>Contrôle d'accès par rôles</span><span>Hachage PBKDF2</span><span>Audit &amp; traçabilité</span><span>Moindre privilège</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PROJETS ===================== -->
+  <section id="projets" class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="frame-tag">Projets</span>
+        <h2>Paquets capturés</h2>
+        <p class="section-sub">Chaque carte, une trame inspectée : d'où elle vient, ce qu'elle transporte, ce qu'elle fait.</p>
+      </div>
+
+      <div class="project-grid">
+
+        <article class="project-card is-flagship" data-tilt>
+          <div class="pc-glow" aria-hidden="true"></div>
+          <div class="pc-scan" aria-hidden="true"></div>
+          <div class="pc-top">
+            <span class="pc-flagship-badge"><i class="fa-solid fa-star"></i> Projet phare</span>
+          </div>
+          <h3 class="pc-title" data-scramble="Coffre-Fort Numérique">Coffre-Fort Numérique</h3>
+          <p class="pc-desc">
+            Stockage et partage sécurisé de documents avec séparation stricte des privilèges
+            base de données vs applicatif. Rôles PostgreSQL dédiés, vues restreintes par
+            catégorie de sensibilité, triggers pour la journalisation automatique et
+            transactions garantissant l'atomicité des opérations sensibles (partage, révocation,
+            suppression en cascade). Mots de passe hachés en PBKDF2, contrôle d'accès par rôles
+            et principe du moindre privilège appliqués de bout en bout.
+          </p>
+          <div class="tags">
+            <span>Django</span><span>PostgreSQL</span><span>Triggers</span><span>Transactions</span>
+            <span>RBAC</span><span>PBKDF2</span><span>Audit</span><span>Modélisation MCD</span>
+          </div>
+          <div class="pc-meta">
+            <span><b>SRC</b> Coffre-Fort Numérique</span>
+            <span><b>PROTO</b> Django · PostgreSQL</span>
+          </div>
+        </article>
+
+        <article class="project-card" data-tilt>
+          <div class="pc-glow" aria-hidden="true"></div>
+          <div class="pc-scan" aria-hidden="true"></div>
+          <h3 class="pc-title" data-scramble="App QR Code">App QR Code</h3>
+          <p class="pc-desc">
+            Application web de génération et de lecture de QR codes, avec système
+            d'authentification et encodage/décodage géré côté serveur.
+          </p>
+          <div class="tags"><span>PHP</span><span>MySQL</span><span>Authentification</span><span>QR encodage/décodage</span></div>
+          <div class="pc-meta">
+            <span><b>SRC</b> App QR Code</span>
+            <span><b>PROTO</b> PHP · MySQL</span>
+          </div>
+        </article>
+
+        <article class="project-card" data-tilt>
+          <div class="pc-glow" aria-hidden="true"></div>
+          <div class="pc-scan" aria-hidden="true"></div>
+          <h3 class="pc-title" data-scramble="Déploiement Java CI/CD">Déploiement Java CI/CD</h3>
+          <p class="pc-desc">
+            Mise en place d'un pipeline d'intégration et de déploiement continu pour une
+            application Java, conteneurisée avec Docker et orchestrée via Docker Compose.
+          </p>
+          <div class="tags"><span>Spring Boot</span><span>Docker Compose</span><span>GitLab CI/CD</span></div>
+          <div class="pc-meta">
+            <span><b>SRC</b> Déploiement Java CI/CD</span>
+            <span><b>PROTO</b> Spring Boot · Docker</span>
+          </div>
+        </article>
+
+        <article class="project-card" data-tilt>
+          <div class="pc-glow" aria-hidden="true"></div>
+          <div class="pc-scan" aria-hidden="true"></div>
+          <h3 class="pc-title" data-scramble="Gestion de Stock">Gestion de Stock</h3>
+          <p class="pc-desc">
+            Application full-stack de gestion de stock : couche JPA/EJB pour la logique
+            métier transactionnelle, Servlets/JSP côté présentation, déployée sur GlassFish.
+          </p>
+          <div class="tags"><span>JPA</span><span>EJB</span><span>Servlets/JSP</span><span>Maven</span></div>
+          <div class="pc-meta">
+            <span><b>SRC</b> Gestion de Stock</span>
+            <span><b>PROTO</b> Jakarta EE · GlassFish</span>
+          </div>
+        </article>
+
+        <article class="project-card" data-tilt>
+          <div class="pc-glow" aria-hidden="true"></div>
+          <div class="pc-scan" aria-hidden="true"></div>
+          <h3 class="pc-title" data-scramble="Exposé Redis">Exposé Redis</h3>
+          <p class="pc-desc">
+            Présentation des structures de données Redis et de leurs cas d'usage,
+            avec un focus sur les benchmarks de performance.
+          </p>
+          <div class="tags"><span>Redis</span><span>Structures de données</span><span>Benchmarking</span></div>
+          <div class="pc-meta">
+            <span><b>SRC</b> Exposé Redis</span>
+            <span><b>PROTO</b> In-memory store</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT ===================== -->
+  <section id="contact" class="section section-contact">
+    <div class="container">
+      <div class="section-head">
+        <span class="frame-tag">Contact</span>
+        <h2>Établir la connexion</h2>
+        <p class="section-sub">Une question, un projet, une proposition de stage ?</p>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <form class="contact-form" id="contactForm" novalidate action="https://formsubmit.co/tinemamadou636@gmail.com" method="post">
+            <input type="hidden" name="_subject" value="Nouveau message depuis le portfolio">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label for="fname">Nom</label>
+                <input type="text" id="fname" name="name" required placeholder="Ton nom">
+              </div>
+              <div class="col-md-6">
+                <label for="femail">Email</label>
+                <input type="email" id="femail" name="email" required placeholder="ton@email.com">
+              </div>
+              <div class="col-12">
+                <label for="fmsg">Message</label>
+                <textarea id="fmsg" name="message" rows="5" required placeholder="Décris ton projet ou ta question..."></textarea>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-signal mt-4">Envoyer <i class="fa-solid fa-paper-plane"></i></button>
+            <p class="form-status" id="formStatus" role="status"></p>
+          </form>
+
+          <div class="socials">
+            <a href="https://github.com/MO-TINE" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/mamadou-tine-65a6412a6" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="mailto:tinemamadou636@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>Mamadou Tine — L3 TDSI, UCAD · <span id="year"></span></p>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
