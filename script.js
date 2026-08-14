@@ -25,7 +25,7 @@ const spyObserver = new IntersectionObserver((entries) => {
 }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
 sections.forEach(section => spyObserver.observe(section));
 
-// Séquence de boot du terminal (personnalisée) 
+// Séquence de boot du terminal  
 const bootLines = [
   { prompt: '$', cmd: 'whoami' },
   { out: 'mamadou.tine' },
