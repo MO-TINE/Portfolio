@@ -1,13 +1,13 @@
 // Footer year
 document.getElementById('year').textContent = new Date().getFullYear();
 
-// Nav background on scroll
+
 const nav = document.getElementById('mainNav');
 window.addEventListener('scroll', () => {
   nav.classList.toggle('scrolled', window.scrollY > 20);
 }, { passive: true });
 
-// Scroll-spy : active le lien de la section visible à l'écran 
+// active le lien de la section visible à l'écran 
 const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
 const sections = Array.from(navLinks)
   .map(link => document.querySelector(link.getAttribute('href')))
@@ -107,7 +107,7 @@ if (badgePhoto && badgeImg) {
   }
 }
 
-// Scroll reveal
+
 const revealTargets = document.querySelectorAll('.skill-card, .project-card, .fact-list, .about-links, .contact-form, .id-badge');
 revealTargets.forEach(el => el.classList.add('reveal'));
 
@@ -221,7 +221,7 @@ form.addEventListener('submit', async (e) => {
     ctx.clearRect(0, 0, w, h);
     const linkDist = 150 * devicePixelRatio;
 
-    // digital rain hex glyphs — accent très discret, esprit "hacking"
+    
     ctx.font = `${11 * devicePixelRatio}px 'JetBrains Mono', monospace`;
     ctx.textBaseline = 'middle';
     for (const d of drops) {
@@ -260,7 +260,7 @@ form.addEventListener('submit', async (e) => {
       }
     }
 
-    // paquets de données voyageant sur les liens 
+   
     maybeSpawnPulse();
     pulses = pulses.filter(p => p.t < 1);
     for (const p of pulses) {
@@ -276,7 +276,7 @@ form.addEventListener('submit', async (e) => {
       ctx.shadowBlur = 0;
     }
 
-    // anneaux radar occasionnels (détection)
+    // anneaux radar occasionnels 
     maybeSpawnRing();
     rings = rings.filter(r => r.r < 70 * devicePixelRatio);
     for (const r of rings) {
@@ -315,7 +315,7 @@ form.addEventListener('submit', async (e) => {
 })();
 
 
-// TILT 3D + SPOTLIGHT — cartes compétences / projets
+// cartes compétences / projets
 
 (function tiltEffect() {
   const cards = document.querySelectorAll('[data-tilt]');
@@ -340,7 +340,7 @@ form.addEventListener('submit', async (e) => {
 })();
 
 
-// TEXT SCRAMBLE — titres de projets (effet "déchiffrement")
+// titres de projets (effet déchiffrement)
 
 (function scrambleTitles() {
   const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ01234567890#$%&/\\';
